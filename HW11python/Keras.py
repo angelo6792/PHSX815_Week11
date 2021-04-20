@@ -113,7 +113,7 @@ model.summary()
 history = model.fit(
     df, labels,
     validation_split=0.3,
-    verbose=1, epochs=100, batch_size=100, shuffle=True)
+    verbose=1, epochs=100, batch_size=20, shuffle=True)
 
 
 def show_loss(history):
@@ -153,3 +153,4 @@ _=plt.yscale('log')
 _=plt.legend()
 
 
+plt.show()
