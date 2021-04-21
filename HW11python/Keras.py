@@ -96,7 +96,7 @@ model.add(Dense(64,activation='relu'))
 #add second layer (first hidden layer)
 model.add(Dense(64,activation='relu'))
 #and one more because why not
-model.add(Dense(64,activation='relu'))
+#model.add(Dense(64,activation='relu'))
 #finally, our output layer should have only one neuron because we are trying to predict only one number
 #notice how there is a different activation function in this layer
 #this is because we want our outputs for each class to be a probability
@@ -113,7 +113,7 @@ model.summary()
 history = model.fit(
     df, labels,
     validation_split=0.3,
-    verbose=1, epochs=100, batch_size=20, shuffle=True)
+    verbose=1, epochs=1000, batch_size=1000, shuffle=True)
 
 
 def show_loss(history):
